@@ -11,7 +11,7 @@ To use this template, you need to finish the followings:
 1. Change the logo to your university and change the address of the logo file.
 2. Install mcode package which is developed to support showing MATLAB code in latex file same as in MATLAB. You can download from: https://ww2.mathworks.cn/matlabcentral/fileexchange/8015-m-code-latex-package<br>
 and find some instruction here: https://tex.stackexchange.com/questions/1137/where-do-i-place-my-own-sty-or-cls-files-to-make-them-available-to-all-my-te<br>
-If you use Mac like me, you can put mcode.sty file into location(/usr/local/texlive/texmf-local/tex/latex/local). It works for me that I uses texstudio to write latex file.
+If you use Mac like me, you can put mcode.sty file into the location(/usr/local/texlive/texmf-local/tex/latex/local). It works for me that I uses texstudio to write latex file.
 
 ## More on the way
 I have some other Latex templates for lab report and thesis. But still under construction and improving. I will update in the future.
