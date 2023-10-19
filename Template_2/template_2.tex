@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, left=3.17cm, right=3.17cm, top=2.54cm, bottom=2.54cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{chemformula}
+\usepackage{cite}
+\usepackage[colorlinks, linkcolor=black, anchorcolor=black, citecolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{enumerate}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{diagbox}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage{xcolor} % for color
+% Define custom colors
+\definecolor{darkred}{rgb}{0.54, 0, 0}  % you can adjust the RGB values to your preference for dark blue
+\definecolor{darkblue}{rgb}{0, 0, 0.5}   % you can adjust the RGB values to your preference for dark red
+% Define 'answer' environment
+\newenvironment{answer}
+  {\par\noindent\itshape\textbf{\textcolor{darkred}{Answer:}}\par\nopagebreak\noindent\rmfamily}
+  {\par\medskip}
+\setcounter{secnumdepth}{0}
+\setlength{\parskip}{0.5em}
+\title{Assignment 1}
+\begin{document}
+	
+	\begin{titlepage}
+		\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+		\includegraphics[width=10cm]{/Users/wanrylin/GitHub/Latex-Assignment-template/Template_2/UVic_logo.eps}\\[1cm] 
+		\centering
+		\quad\\[1.5cm]
+		\textsl{\Large University of Victoria }\\[0.5cm] 
+		\textsl{\large Department of Electrical and Computer Engineering}\\[0.5cm] 
+		\makeatletter
+		\HRule \\[0.4cm]
+		{ \huge \bfseries \@title}\\[0.4cm] 
+		\HRule \\[1.5cm]
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{Student:}\\
+				\textup{Your Name}
+			\end{flushleft}
+		\end{minipage}
+		~
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{Matriculation Number:} \\
+				\textup{A01234567}
+			\end{flushright}
+		\end{minipage}\\[3cm]
+		\makeatother
+		{\large \emph{ECE 500 Course Name}}\\[0.5cm]
+		{\large \today}\\[2cm] 
+		\vfill 
+	\end{titlepage}
+
+\section{Question X}
+\begin{enumerate}[(1)]
+	\item
+	$$
+	\left\{
+	\begin{array}{ll}
+		\sum_{i =1}^{m}w_ix_i + b + \sqrt{-2ln\zeta} = 0 \\
+		\sum_{i =1}^{m}w_ix_i + b - \sqrt{-2ln\zeta} = 0
+	\end{array}
+	\right.
+	$$
+	\item Here is the question:\\
+	\begin{answer}
+	Then we set the threshold at zero, which means:
+	\begin{equation}
+		\begin{aligned}
+			\left\{
+			\begin{array}{ll}
+				w_1x_1 + w_2x_2 + b \leq 0\hspace{1cm}y = 0 \\
+				w_1x_1 + w_2x_2 + b > 0\hspace{1cm}y = 1
+			\end{array}
+			\right.
+		\end{aligned}
+	\end{equation}
+	The font family has been changed to roman.
+	\end{answer}
+\item 
+	Take all conditions into (1):
+	\begin{table}[H]
+		\centering
+		\caption{Fitting performance with different regularization}
+				\begin{tabular}{ |c|c|c|c|c|c|c|} 
+					\hline
+					\diagbox{MSE}{$\lambda$} & 0 & 0.01 &0.1 &1&10&100 \\ 
+					\hline
+					train set & 0.0389&	0.4442&	0.4583&	0.4792&	0.6491&	1.3993 \\ 
+					\hline
+					test set &0.6910&	0.1572&	0.1410&	0.1136&	0.2023&	0.8647\\
+					\hline
+				\end{tabular}
+		\end{table}
+\item
+	\begin{align}
+		b \leq 0\\
+		w_1 + b > 0\\
+		w_2 + b >0\\
+		w_1 + w_2 + b \leq 0
+	\end{align}
+\item \begin{equation}
+	\begin{split}
+		LHS &= E_p\oint dA = E_p 4\pi r_p^2\\
+		&= RHS = \frac{1}{\varepsilon}\iiint \rho (r)dV = \frac{1}{\varepsilon}\iiint \rho (r)dxdydz = \frac{1}{\varepsilon}\iiint \rho (r) r^2sin\theta drd\theta d\varphi\\
+		&=\frac{\rho_0}{\varepsilon a}\int_{0}^{r_p} r^3 dr\int_{0}^{\pi} sin\theta d\theta \int_{0}^{2\pi} d\varphi = \frac{\rho_0 \pi r_p^4}{\varepsilon a} \notag
+	\end{split}
+\end{equation}
+\item
+ (1) AND:
+$$ v = \begin{bmatrix} -1.5 & 1 & 1\end{bmatrix} \begin{bmatrix} 1 \\ x_1 \\ x_2\end{bmatrix}\hspace{1cm}
+y=\left\{
+\begin{aligned}
+	0\hspace{0.5cm}if\ v < 0 \\
+	1\hspace{0.5cm}if\ v \geq 0
+\end{aligned}
+\right.
+$$
+\item 
+(1)Comparision with a)
+\iffalse
+\begin{figure}[htbp]
+	\centering
+	\subfigure[off-line calculation]
+	{
+		\begin{minipage}[b]{.3\linewidth}
+			\centering
+			\includegraphics[scale=0.2]{and_off.eps}
+		\end{minipage}
+	}
+	\subfigure[learning result]
+	{
+		\begin{minipage}[b]{.3\linewidth}
+			\centering
+			\includegraphics[scale=0.2]{and_learn.eps}
+		\end{minipage}
+	}
+	\subfigure[weights trajectories]
+	{
+		\begin{minipage}[b]{.3\linewidth}
+			\centering
+			\includegraphics[scale=0.2]{and_w.eps}
+		\end{minipage}
+	}
+	\caption{AND gate}
+\end{figure}
+\item 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.18]{and_100_sup.eps}
+	\caption{the decision line of $\eta=100$ }
+	\label{decison line}
+\end{figure}
+\fi
+	
+	
+\end{enumerate}
+	
+\begin{lstlisting}
+	%% Q3
+	% ground truth
+	AND = [ 0 0 1 1 ; 0 1 0 1 ; 0 0 0 1];
+	OR = [ 0 0 1 1 ; 0 1 0 1 ; 0 1 1 1];
+	COMPLEMENT = [ 0 1 ; 1 0];
+	NAND = [ 0 0 1 1 ; 0 1 0 1 ; 1 1 1 0];
+	XOR = [ 0 1 0 1 ; 0 0 1 1 ; 0 1 1 0];
+
+\end{lstlisting}
+\end{document}

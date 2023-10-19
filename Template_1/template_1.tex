@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath,amsfonts}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{8.7in}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{subfigure}
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{enumerate}
+
+\title{EE5801 Assignment 2}
+\author{Wang Ruilin A0260074M}
+
+\begin{document}
+\maketitle
+\section{Homework list}
+
+\begin{itemize}
+
+\item Tutorial 3
+
+\item Tutorial 4
+
+\end{itemize}
+
+\section{Solution}
+\subsection{Tutorial 3}
+
+\begin{enumerate}[Q1]
+
+\item[1]
+We give a proof by induction. 
+Let $S(n)=1+5+9+...+(4n-3)$, where n is a positive integer.
+We want to prove that for every n, $S(n)=2n^2-n$.
+
+
+Basis step:
+$S(1)=2 \times 1^2-1=1$, which is same with sum of 1. 
+
+
+Inductive step:
+Assume $S(k)=2k^2-k$. We want to show $S(k+1)=2(k+1)^2-k$. 
+$$S(k+1)=1+5+9+...+(4k-3)+(4(k+1)-3)=S(k)+4(k+1)-3$$
+$$S(k+1)=2k^2-k+4(k+1)-3=2k^2+4k+2-1-k$$
+$$2k^2+4k+2-1-k=2(k^2+2k+1)-1-k=2(k+1)^2-(k+1)$$
+
+
+So, we have shown that if $S(k)=2k^2-k$, then $S(k+1)=2(k+1)^2-k$. Since the statement is also true for the basis case, $S(n)=2n^2-n$ for every positive integer n.
+
+
+
+
+
+
+
+\end{enumerate}
+\end{document}
